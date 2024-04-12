@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { truncate } from 'node:fs';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
+  standalone:true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

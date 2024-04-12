@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ecobintracer": {
+      "hosting": {
+        "angular-firebase-crud": [
+          "ecobintracer"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ecobintracer"
+  }
+}

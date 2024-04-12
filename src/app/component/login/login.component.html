@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.btn-info {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-info:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+.container-fluid {
+    padding-top: 50px;
+}
+
+body {
+    background-color: #f6f5f7;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+button {
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    transform: translateX(100%);
+    z-index: 100;
+}
+
+.overlay {
+    position: relative;
+    height: 100%;
+    width: 200%;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.overlay-panel h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.overlay-panel p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #777;
+}
+
+.overlay-panel button {
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+
+
+  </style>
+</head>
+<body>
+    <div class="form-container Registration">
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col-md"></div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+    <form>
+      <h1>Log In</h1>
+      <div class="mb-3">
+      <label for="exampleInputEmail" class="form-label">Email</label>
+      <input type="email" placeholder="email" name="email" [(ngModel)] = "email">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword" class="form-label">Password</label>
+      <input type="password" placeholder="Password" name="password" [(ngModel)] = "password">
+    </div>
+    <div class="col-md-6">
+        <a href=""> Need Account ? </a></div>
+    <div class="col-md-6"> 
+        <a href="#">Forgot your password?</a>
+    </div>
+      <button type="button" class="btn btn-info" (click)= "login()">Log in</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+   </div>
+</body>
+</html>
